@@ -37,6 +37,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.firebase.R
 import com.example.firebase.modeldata.Siswa
 import com.example.firebase.view.route.DestinasiHome
+import com.example.firebase.viewmodel.HomeViewModel
+import com.example.firebase.viewmodel.PenyediaViewModel
+import com.example.firebase.viewmodel.StatusUiSiswa
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
