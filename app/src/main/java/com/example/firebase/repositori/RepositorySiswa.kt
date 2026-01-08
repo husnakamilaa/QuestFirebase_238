@@ -3,10 +3,14 @@ package com.example.firebase.repositori
 import com.example.firebase.modeldata.Siswa
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
+import kotlin.text.get
+import kotlin.text.set
 
 interface RepositorySiswa {
-    suspend fun getDataSiswa() : List<Siswa>
+    suspend fun getDataSiswa(): List<Siswa>
     suspend fun postDataSiswa(siswa: Siswa)
+
+    suspend fun getSatuSiswa(id: Long): Siswa?
 }
 
 class FirebaseRepositorySiswa: RepositorySiswa{
@@ -38,4 +42,9 @@ class FirebaseRepositorySiswa: RepositorySiswa{
         )
         docRef.set(data).await()
     }
+
+
 }
+
+
+
