@@ -28,5 +28,9 @@ class DetailViewModel(savedStateHandle: SavedStateHandle,
     var statusUIDetail: StatusUIDetail by mutableStateOf(StatusUIDetail.Loading)
         private set
 
+    init {
+        getSatuSiswa()
+    }
+
 
 }
